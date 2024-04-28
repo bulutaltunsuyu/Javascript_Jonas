@@ -133,7 +133,7 @@ console.log(calcAge3(1881));
  */
 //ARRAYS
 
-const friends = ["michael", "Steven", "Peter"];
+/* const friends = ["michael", "Steven", "Peter"];
 friends.push("Jay"); // Diziye veri ekler
 console.log(friends);
 
@@ -152,11 +152,27 @@ console.log(friends.indexOf("Steven")); // belirtilen elemanın indexini döndü
 console.log(friends.includes("Steven")); // true yada false döner
 
 const jonasArray = ["jonas", "Schmedtmann", 2037 - 1991];
-
+ */
 const jonas = {
   firstName: "Jonas",
   lastName: "Schmedtmann",
-  age: 2037 - 1991,
+  birthYear: 1991,
   job: "teacher",
   friend: ["michael", "Steven", "Peter"],
+  hasDriversLicence : true,
+  calcAge: function (birthYear){
+    return 2037 - birthYear
+  },
+  calcAge2: function (){
+    console.log(this)
+    return 2037 - this.birthYear
+  }
 };
+console.log(jonas.calcAge(1976));
+console.log(jonas['calcAge'](1991));
+jonas.calcAge2()
+
+/* 
+Burada this keyword 'u kullanacağız. Burda this, methodu çağıran objeyi hedefler.
+*/
+
