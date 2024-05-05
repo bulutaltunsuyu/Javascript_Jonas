@@ -151,28 +151,44 @@ console.log(friends.indexOf("Steven")); // belirtilen elemanın indexini döndü
 // ES6 komutu yeni
 console.log(friends.includes("Steven")); // true yada false döner
 
-const jonasArray = ["jonas", "Schmedtmann", 2037 - 1991];
+
  */
+
+const jonasArray = ["jonas", "Schmedtmann", 2037 - 1991];
 const jonas = {
   firstName: "Jonas",
   lastName: "Schmedtmann",
   birthYear: 1991,
   job: "teacher",
   friend: ["michael", "Steven", "Peter"],
-  hasDriversLicence : true,
-  calcAge: function (birthYear){
-    return 2037 - birthYear
+  hasDriversLicence: true,
+  calcAge: function (birthYear) {
+    return 2037 - birthYear;
   },
-  calcAge2: function (){
-    console.log(this)
-    return 2037 - this.birthYear
-  }
+  calcAge2: function () {
+    console.log(this);
+    return 2037 - this.birthYear;
+  },
 };
-console.log(jonas.calcAge(1976));
+
+
+/* console.log(jonas.calcAge(1976));
 console.log(jonas['calcAge'](1991));
 jonas.calcAge2()
-
+ */
 /* 
 Burada this keyword 'u kullanacağız. Burda this, methodu çağıran objeyi hedefler.
 */
 
+/* for(let rep = 1; rep <=10 ; rep++ ){
+  console.log(`lifting weights repetiton ${rep}`);
+} */
+
+const types = [];
+
+for (let i = 0; i < jonasArray.length; i++) {
+  console.log(jonasArray[i],typeof jonasArray[i]);
+ if(typeof jonasArray[i] !== 'string') continue;
+ types[i]= typeof jonasArray[i]
+}
+console.log(types)
