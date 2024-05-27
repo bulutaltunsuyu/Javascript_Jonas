@@ -154,7 +154,13 @@ console.log(friends.includes("Steven")); // true yada false döner
 
  */
 
-const jonasArray = ["jonas", "Schmedtmann", 2037 - 1991];
+const jonasArray = [
+  "jonas", 
+  "Schmedtmann", 
+  2037 - 1991,
+  "teacher",
+  ["michael", "Peter","Steven"]
+];
 const jonas = {
   firstName: "Jonas",
   lastName: "Schmedtmann",
