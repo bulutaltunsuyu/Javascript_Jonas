@@ -190,7 +190,7 @@ Burada this keyword 'u kullanacağız. Burda this, methodu çağıran objeyi hed
   console.log(`lifting weights repetiton ${rep}`);
 } */
 
-const types = [];
+/* const types = [];
 
 for (let i = 0; i < jonasArray.length; i++) {
   console.log(jonasArray[i],typeof jonasArray[i]);
@@ -198,3 +198,9 @@ for (let i = 0; i < jonasArray.length; i++) {
  types[i]= typeof jonasArray[i]
 }
 console.log(types)
+ */
+const button = document.querySelector(".guessbutton");
+button.addEventListener('click',function(){
+  console.log('button calllisti')
+  button.style.color = 'red';
+});
